@@ -1,0 +1,262 @@
+* {
+  font-family: "manrope", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#desktop-navbar {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#desktop-navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+#desktop-navbar button {
+  background-color: #f17b07;
+  border: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#mobile-navbar {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.mobile-navbar-logo {
+  align-self: flex-start;
+  display: flex;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.img-container {
+  display: flex;
+}
+
+.main-article-image {
+  display: block;
+  max-width: 300px;
+}
+.author-summary {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.author-avatar {
+  object-fit: cover;
+  height: 40px;
+
+}
+
+.name-title-div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+}
+
+.weekly-newsletter-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin-top: auto;
+  gap: 20px;
+}
+
+.featured-articles-container {
+  display: grid;
+  grid-template-rows: (3, 1fr);
+  width: auto;
+  margin-top: auto;
+  gap: 20px;
+}
+
+.newsletter-article,
+.featured-article {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.article-image {
+  max-width: 350px;
+}
+#footer {
+  justify-content: space-between;
+  padding: 20px;
+}
+/*  -------------------------------------------------
+
+
+
+                        MEDIA
+                        QUERIES
+
+
+
+
+ ------------------------------------------------- */
+
+/* || SMALL */
+@media screen and (max-width: 481px) {
+  #desktop-navbar {
+    display: none;
+  }
+
+  .top-article-container, .featured-articles-container {
+    display: grid;
+  }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #mobile-navbar {
+    display: none;
+  }
+
+  #desktop-navbar {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-right: 10px;
+  }
+
+  .top-article-container, .featured-articles-container {
+    display: grid;
+   }
+
+   .newsletter-article, .featured-article {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+   }
+
+
+
+   #footer {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .desktop-show {
+    display: flex;
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width: 769px) and (max-width: 2500px) {
+body {
+    min-height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  #mobile-navbar {
+    display: none;
+  }
+  mobile-navbar-logo {
+    display: none;
+  }
+
+  #desktop-navbar {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .newsletter-img-container {
+    display: flex;
+  }
+
+  .newsletter-article {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    box-sizing: content-box;
+    width: 100%;
+    padding: 0;
+  }
+
+  .main article-image {
+    display: block;
+
+  }
+
+  .name-title-div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .top-article-container {
+    box-sizing: content-box;
+    margin: 0 auto;
+  }
+
+
+
+  .featured-articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    margin-top: auto;
+    gap: 20px;
+  }
+
+  .featured-article {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: justify;
+  }
+
+  .article-image {
+    object-fit: contain;
+    display:block;
+    margin: 0 auto;
+  }
+
+  .author-summary {
+    display: grid;
+    grid-template-columns: 45px 200px;
+    margin-top: 10px;
+  }
+
+  #footer {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+.desktop-show {
+  display: none;
+}
+}
